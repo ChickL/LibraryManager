@@ -44,10 +44,6 @@ LoginWidget::~LoginWidget()
 void LoginWidget::on_bt_login_clicked()
 {
     MainWidget *mainWidget = new MainWidget;
-    mainWidget->show();
-
-//    SearchWidget *s = new SearchWidget;
-//    s->show();
-
+    mainWidget->show();   
     this->close();
 }

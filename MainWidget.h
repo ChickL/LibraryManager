@@ -4,6 +4,9 @@
 #include <QWidget>
 #include "qt_include.h"
 #include "SearchWidget.h"
+#include "BorrowStatusWidget.h"
+#include "UserManagementWidget.h"
+#include "BookManagementWidget.h"
 
 class MainWidget : public QWidget
 {
@@ -18,10 +21,12 @@ private:
     QTabWidget *tab;
     QWidget *topWidget;
     QWidget *searchWidget;
-    QWidget *borrowWidget;
-    QWidget *userManagementWidget;
-    QWidget *bookManagementWidget;
+    QTreeWidget *borrowStatusWidget;
+    UserManagementWidget *userManagementWidget;
+    BookManagementWidget *bookManagementWidget;
     QPalette pal;
+    QLabel *lb1;
+    QLabel *lb2;
 };
 
 #endif // MAINWIDGET_H

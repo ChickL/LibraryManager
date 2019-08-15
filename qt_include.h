@@ -19,5 +19,7 @@
 #include <QPixmap>
 #include <QStringList>
 #include <QComboBox>
+#include <QRadioButton>
+#include <QGroupBox>
 
 #endif // QT_INCLUDE_H

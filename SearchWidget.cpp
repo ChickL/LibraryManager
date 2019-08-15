@@ -103,6 +103,8 @@ SearchWidget::SearchWidget(QWidget *parent) :
     //精确检索
     //左边
     lb1->setText(QStringLiteral("精确检索"));
+    lb1->setFont(QFont("Microsoft YaHei",20,75));
+    lb1->setContentsMargins(0,0,0,20);
     lb2->setText(QStringLiteral("书籍编号"));
     lb3->setText(QStringLiteral("书名"));
     lb4->setText(QStringLiteral("作者"));
@@ -111,11 +113,20 @@ SearchWidget::SearchWidget(QWidget *parent) :
     lb7->setText(QStringLiteral("出版社"));
     lb8->setText(QStringLiteral("价格"));
     lb9->setText(QStringLiteral("———"));
+    lb1->setAlignment(Qt::AlignHCenter);
+    lb2->setAlignment(Qt::AlignCenter);
+    lb3->setAlignment(Qt::AlignCenter);
+    lb4->setAlignment(Qt::AlignCenter);
+    lb5->setAlignment(Qt::AlignCenter);
+    lb6->setAlignment(Qt::AlignCenter);
+    lb7->setAlignment(Qt::AlignCenter);
+    lb8->setAlignment(Qt::AlignCenter);
+    lb9->setAlignment(Qt::AlignCenter);
 
     QStringList strList;
     strList<<"2019"<<"2018"<<"2017"<<"2016"<<"2015"<<"2014"<<"2013"
-           <<"2012"<<"2011"<<"2010"<<"2009"<<"2008"<<"2007"<<"2006"
-           <<"2005"<<"2004"<<"2003"<<"2002"<<"2001"<<"2000"<<"1999";
+             <<"2012"<<"2011"<<"2010"<<"2009"<<"2008"<<"2007"<<"2006"
+               <<"2005"<<"2004"<<"2003"<<"2002"<<"2001"<<"2000";
     cb1->addItems(strList);
     cb2->addItems(strList);
 
@@ -151,6 +162,7 @@ SearchWidget::SearchWidget(QWidget *parent) :
     search->setText(QStringLiteral("开始检索"));
     cb->setText(QStringLiteral("只选择有余量的书籍"));
 
+//    vbox0->addWidget(lb10);
     vbox0->addWidget(search);
     vbox0->addWidget(cb);
 
@@ -164,12 +176,12 @@ SearchWidget::SearchWidget(QWidget *parent) :
     temp1->setLayout(hbox0);
     vbox->addWidget(temp1,1);
 
-    vbox->addWidget(bookInfoWidget,3);
+    vbox->addWidget(bookInfoWidget,7);
     hbox->addWidget(bookTypeWidget,1);
 
 //    hbox->addLayout(vbox,5);
     temp2->setLayout(vbox);
-    hbox->addWidget(temp2,5);
+    hbox->addWidget(temp2,7);
 
     this->setLayout(hbox);
 
